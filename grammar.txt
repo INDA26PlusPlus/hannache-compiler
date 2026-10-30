@@ -1,0 +1,51 @@
+
+Fibonacchi koden:
+
+jiayi ::= let
+
+ia ::= print()
+jiajiajia ::= while
+
+jiayi a = 1;
+jiayi b = 2;
+jiayi itiration = 10;
+
+jiajiajia ( n > 0 ) {
+    ia()
+}
+
+
+let a = 1;
+let b = 1;
+let c = a+b;
+let n = 10
+
+while n > 0 {
+    print(c);
+    c = a + b;
+    a = b;
+    b = c;
+    n = n - 1;
+};
+
+
+Syntax:
+* means 0 or more
+
+program ::= statement*
+
+statement ::= "let" VARIABLE "=" value ";" | 
+                VARIABLE "=" value ";" |
+                "if" truefalse "{" statement* "}" (( "elif" truefalse "{" statement* "}")* ("else" "{" statement* "}" ))? ";" | 
+                "while" truefalse "{" statement* "}" ";" |
+                "print" "(" value ")" ";"
+
+truefalse ::= comparable comparison comparable 
+comparable ::= NUMBER | VARIABLE
+comparison ::= ">" | "=="
+
+value ::= VARIABLE | NUMBER | value arithmetic value 
+arithmetic ::= "+" | "-"
+
+NUMBER ::= [0-9]+
+VARIABLE ::= [a-zA-Z_][a-zA-Z0-9_]* forbid: "while" "if" "print" "let" "else" "elif"
